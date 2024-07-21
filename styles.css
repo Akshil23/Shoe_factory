@@ -1,0 +1,164 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, rgba(34, 193, 195, 0.7), rgba(253, 187, 45, 0.7)), url('/images/img1.png') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #333; /* Ensure text color is readable against the background */
+}
+
+h1 {
+    text-align: center;
+    color: #333; /* Dark color for better visibility */
+    font-size: 3em;
+    margin-top: 40px;
+    font-family: 'Trebuchet MS', sans-serif;
+    letter-spacing: 2px;
+    background: linear-gradient(to right, #2458dc, #5e3c22);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#products {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.85); /* Semi-transparent background to stand out against image */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+}
+
+.product {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    width: calc(33.333% - 40px); /* Three products per row with some margin */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+    width: 100%;
+    height: 200px; /* Fixed height for consistent image size */
+    object-fit: contain; /* Ensure the entire image is visible */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+#checkout {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 30px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#checkout:hover {
+    background-color: #45a049;
+    transform: scale(1.05);
+}
+
+#receipt {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #000;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.quantity-display {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #d9534f; /* Bootstrap's 'danger' color */
+}
+
+#secondHeading {
+    display: block;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #000;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+    background-color: #45a049;
+    color: white;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #000;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    #products {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .product {
+        width: 90%;
+        margin: 15px 0;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+}
+
+@keyframes buttonPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+button {
+    animation: buttonPulse 2s infinite;
+}

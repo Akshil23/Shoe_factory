@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Shoe Store</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h1>The Shoe Factory :</h1>
+    <div id="products">
+        <div class ="product">
+            <img src="/images/img2.jpg" alt="Shoe 1" class="product-image">
+            <h2> AirMax</h2>
+            <p> Price : $200</p>
+            <button onclick="addToOrder('AirMax',200,'quantity1');"> Add to Order</button>
+            <span id="quantity1" class ="quantity-display"></span>
+        </div>
+        <div class ="product">
+            <img src="/images/img3.jpg" alt="Shoe 2" class="product-image">
+            <h2> Jordan 4</h2>
+            <p> Price : $180</p>
+            <button onclick="addToOrder('Jordan 4',180,'quantity2');" > Add to Order</button>
+            <span id="quantity2" class ="quantity-display"></span>
+        </div>
+        <div class ="product">
+            <img src="/images/img5.webp" alt="Shoe 1" class="product-image">
+            <h2>Underarmour Curry 6</h2>
+            <p> Price :$220</p>
+            <button onclick="addToOrder('Underarmour Curry 6',220,'quantity3');"> Add to Order</button>
+            <span id="quantity3" class ="quantity-display"></span>
+        </div>
+
+        <div class ="product">
+            <img src="/images/img4.jpeg" alt="Shoe 1" class="product-image">
+            <h2>Jordan Two-Zero</h2>
+            <p> Price : $310</p>
+            <button onclick="addToOrder('Jordan Two-Zero',310,'quantity4');" > Add to Order</button>
+            <span id="quantity4" class ="quantity-display"></span>
+        </div>
+        <div class ="product">
+            <img src="/images/img6.jpeg" alt="Shoe 1" class="product-image">
+            <h2> Jordan God of Rings</h2>
+            <p> Price : $420</p>
+            <button onclick="addToOrder('Jordan God of Rings',420,'quantity5');" > Add to Order</button>
+            <span id="quantity5" class ="quantity-display"></span>
+        </div>
+    </div>
+    <button id="checkout" onclick="checkout();">CheckOut</button>
+    <div id="receipt"></div>
+    <script src = "/js/script.js"></script>
+</body>
+</html>
